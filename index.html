@@ -1,19 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./page/index.css" />
+    <title>Web Project 4</title>
+  </head>
+  <body class="page">
+    <main class="body">
+      <header class="header">
+        <img
+          src="./images/logo.svg"
+          alt="Around the U.S."
+          class="header__logo"
+        />
+      </header>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./page/index.css">
-  <title>Web Project 4</title>
-</head>
-<body class="page">
-  <div class="body">
-    <header class="header">
-      <img src="./images/around.svg" alt="Around the U.S." class="header__logo">
-    </header>
-  </div>
-</body>
+      <section class="profile">
+        <img
+          src="./images/cousteau.svg"
+          alt="Jacques Cousteau"
+          class="profile__image"
+        />
+        <div class="profile__container">
+          <div class="profile__container-text">
+            <h1 class="profile__title">
+              Jacques Cousteau
+              <span class="profile__container-icon">
+                <img src="./images/edit-icon.svg" alt="Edit icon"
+              /></span>
+            </h1>
 
+            <p class="profile__subtitle">Explorer</p>
+          </div>
+        </div>
+        <div class="profile__add-btn">
+          <img
+            src="./images/plus-icon.svg"
+            alt="Plus Icon"
+            class="profile__plus-icon"
+          />
+        </div>
+      </section>
+    </main>
+  </body>
 </html>

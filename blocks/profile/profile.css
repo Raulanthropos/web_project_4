@@ -1,0 +1,9 @@
+.profile {
+  margin-top: 36.25px;
+  margin-bottom: 46.25px;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: 1px solid tomato;
+}
