@@ -1,0 +1,4 @@
+.body {
+  margin: auto;
+  width: calc(100% - 400px);
+}
