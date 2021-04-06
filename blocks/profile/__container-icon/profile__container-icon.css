@@ -1,3 +1,11 @@
 .profile__container-icon {
   border: 1px solid #fff;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 15px;
+  left: 391px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

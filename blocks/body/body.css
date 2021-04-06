@@ -1,4 +1,4 @@
 .body {
   margin: auto;
-  width: calc(100% - 400px);
+  max-width: 880px;
 }
