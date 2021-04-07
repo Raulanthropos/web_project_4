@@ -7,4 +7,19 @@
   align-items: center;
   position: absolute;
   right: 0;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 879px) {
+  .profile__add-btn {
+    position: relative;
+    right: auto;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .profile__add-btn {
+    width: 282px;
+    margin: 36px auto;
+  }
 }

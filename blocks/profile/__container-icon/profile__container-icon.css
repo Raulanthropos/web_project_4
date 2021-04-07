@@ -8,4 +8,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 879px) {
+  .profile__container-icon {
+    position: relative;
+    top: auto;
+    left: 15.25px;
+    display: inline-flex;
+  }
 }

@@ -3,7 +3,8 @@
 @import url(../blocks/page/page.css);
 @import url(../blocks/body/body.css);
 @import url(../blocks/header/header.css);
-@import url(../__logo/header__logo.css);
+@import url(../blocks/header/__logo/header__logo.css);
+@import url(../blocks/horizontal-line/horizontal-line.css);
 @import url(../blocks/profile/profile.css);
 @import url(../blocks/profile/__container/profile__container.css);
 @import url(../blocks/profile/__image/profile__image.css);
@@ -13,6 +14,16 @@
 @import url(../blocks/profile/__subtitle/profile__subtitle.css);
 @import url(../blocks/profile/__add-btn/profile__add-btn.css);
 @import url(../blocks/profile/__plus-icon/profile__plus-icon.css);
+@import url(../blocks/popup/popup.css);
+@import url(../blocks/modal/modal.css);
+@import url(../blocks/modal/__form/modal__form.css);
+@import url(../blocks/modal/__fields/modal__fields.css);
+@import url(../blocks/modal/__form-element/modal__form-element.css);
+@import url(../blocks/modal/__form-title/modal__form-title.css);
+@import url(../blocks/modal/__form-subtitle/modal__form-subtitle.css);
+@import url(../blocks/modal/__form-x/modal__form-x.css);
+@import url(../blocks/modal/__save-btn/form__save-btn.css);
+@import url(../blocks/popup/_active/popup_active.css);
 @import url(../blocks/elements/elements.css);
 @import url(../blocks/elements/__card/elements__card.css);
 @import url(../blocks/elements/__card-img/elements__card-img.css);

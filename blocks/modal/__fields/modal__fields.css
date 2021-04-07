@@ -1,0 +1,7 @@
+.modal__fields {
+  border: 1px solid #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
