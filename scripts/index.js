@@ -6,7 +6,7 @@ let title = document.querySelector(`.profile__title`);
 let aboutMe = document.querySelector(`.profile__subtitle`);
 let nameInput = document.querySelector(`.modal__form-title`);
 let jobInput = document.querySelector(`.modal__form-subtitle`);
-let saveProfileBtn = document.querySelector(`.form__btn`);
+let saveProfileBtn = document.querySelector(`.modal__btn`);
 let profile = {};
 
 function updateProfile() {

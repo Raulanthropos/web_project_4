@@ -1,4 +1,4 @@
-.form__btn {
+.modal__btn {
     font-size: 18px;
     line-height: 22px;
     color: #FFFFFF;
@@ -12,12 +12,12 @@
     transition: opacity 1s linear;
 }
 
-.form__btn:hover {
+.modal__btn:hover {
     opacity: 0.8;
 }
 
 @media screen and (max-width: 580px) {
-    .form__btn {
+    .modal__btn {
         margin: 42px 22px 25px;
         width: 238px;
         height: 48px;
