@@ -1,3 +1,9 @@
+@import url(./__card/elements__card.css);
+@import url(./__card-img/elements__card-img.css);
+@import url(./__card-text/elements__card-text.css);
+@import url(./__card-title/elements__card-title.css);
+@import url(./__card-like/elements__card-like.css);
+
 .elements {
   margin: 0;
   padding: 0;

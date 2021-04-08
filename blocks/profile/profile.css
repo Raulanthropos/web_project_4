@@ -1,3 +1,12 @@
+@import url(./__container/profile__container.css);
+@import url(./__image/profile__image.css);
+@import url(./__container-text/profile__container-text.css);
+@import url(./__container-icon/profile__container-icon.css);
+@import url(./__title/profile__title.css);
+@import url(./__subtitle/profile__subtitle.css);
+@import url(./__add-btn/profile__add-btn.css);
+@import url(./__plus-icon/profile__plus-icon.css);
+
 .profile {
   margin-top: 36.25px;
   margin-bottom: 46.25px;

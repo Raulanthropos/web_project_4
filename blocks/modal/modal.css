@@ -1,3 +1,10 @@
+@import url(./__form/modal__form.css);
+@import url(./__fields/modal__fields.css);
+@import url(./__form-element/modal__form-element.css);
+@import url(./__form-title/modal__form-title.css);
+@import url(./__form-subtitle/modal__form-subtitle.css);
+@import url(./__form-x/modal__form-x.css);
+@import url(./__save-btn/form__save-btn.css);
 
 .modal {
   position: relative;
