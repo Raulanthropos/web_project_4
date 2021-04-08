@@ -4,7 +4,7 @@
 @import url(./__form-title/modal__form-title.css);
 @import url(./__form-subtitle/modal__form-subtitle.css);
 @import url(./__form-x/modal__form-x.css);
-@import url(./__save-btn/form__save-btn.css);
+@import url(./__btn/form__btn.css);
 
 .modal {
   position: relative;
