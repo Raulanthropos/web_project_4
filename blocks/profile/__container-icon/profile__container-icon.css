@@ -9,13 +9,27 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  transition: opacity 0.4s linear;
+}
+
+.profile__container-icon:hover {
+  opacity: 0.6;
 }
 
 @media screen and (max-width: 879px) {
   .profile__container-icon {
     position: relative;
     top: auto;
-    left: 15.25px;
-    display: inline-flex;
+    width: 18px;
+    height: 18px;
+    left: auto;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .profile__container-icon {
+    position: absolute;
+    top: 30px;
+    right: -30px;
   }
 }

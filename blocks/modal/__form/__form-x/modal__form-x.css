@@ -6,9 +6,4 @@
   color: #fff;
   right: -35px;
   cursor: pointer;
-  transition: opacity 2s linear;
-}
-
-.modal__form-x:hover {
-  opacity: 0.6;
 }

@@ -1,0 +1,10 @@
+.profile__button-sm {
+  width: 24px;
+  height: 24px;
+  border: 1px solid #fff;
+  background-color: black;
+  position: absolute;
+  left: 400px;
+  top: 30px;
+  cursor: pointer;
+}

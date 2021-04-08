@@ -8,4 +8,18 @@
     border-radius: 2px;
     border: 0;
     margin: 48px 36px 36.50px;
+    cursor: pointer;
+    transition: opacity 1s linear;
+}
+
+.form__save-btn:hover {
+    opacity: 0.8;
+}
+
+@media screen and (max-width: 580px) {
+    .form__save-btn {
+        margin: 42px 22px 25px;
+        width: 238px;
+        height: 48px;
+    }
 }
