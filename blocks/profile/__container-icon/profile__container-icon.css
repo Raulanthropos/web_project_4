@@ -1,10 +1,10 @@
 .profile__container-icon {
   border: 1px solid #fff;
+  background-color: inherit;
   width: 24px;
   height: 24px;
-  position: absolute;
-  top: 15px;
-  left: 391px;
+  margin-left: 18px;
+  align-self: center;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26,7 +26,7 @@
   }
 }
 
-@media screen and (max-width: 580px) {
+@media screen and (max-width: 680px) {
   .profile__container-icon {
     position: absolute;
     top: 30px;

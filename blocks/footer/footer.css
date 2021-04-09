@@ -2,6 +2,7 @@
   font-family: 'Inter', Arial, sans-serif;
   color: #545454;
   font-weight: 400;
+  font-style: normal;
   font-size: 18px;
   line-height: 1.1;
   margin-top: 68px;
@@ -11,5 +12,14 @@
 @media screen and (max-width: 879px) {
   .footer {
     max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .footer {
+    font-size: 14px;
+    line-height: 17px;
+    width: 282px;
+    margin: 50px auto 36px;
   }
 }

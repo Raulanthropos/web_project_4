@@ -13,33 +13,32 @@
   <main class="body">
     <header class="header">
       <img src="./images/logo.svg" alt="Around the U.S." class="header__logo" />
-      <hr class="horizontal-line">
     </header>
     <section class="profile">
       <img src="./images/cousteau.svg" alt="Jacques Cousteau" class="profile__image" />
       <div class="profile__container">
         <div class="profile__container-text">
           <h1 class="profile__title">Jacques Cousteau</h1>
-          <div class="profile__container-icon">
+          <button class="profile__container-icon" type="button">
             <img src="./images/edit-icon.svg" alt="Edit icon" />
-          </div>
+          </button>
           <p class="profile__subtitle">Explorer</p>
         </div>
       </div>
-      <div class="profile__add-btn">
+      <button type="button" class="profile__add-btn">
         <img src="./images/plus-icon.svg" alt="Plus Icon" class="profile__plus-icon" />
-      </div>
+      </button>
     </section>
     <section class="popup">
-      <div class="modal modal_inactive">
-        <form action="#" class="modal__form">
+      <div class="modal">
+        <form action="#" class="modal__form" name="form">
           <h2 class="modal__title">Edit profile</h2>
           <fieldset class="modal__fields">
-            <input type="text" class="modal__form-element modal__form-title" placeholder="Name">
-            <input type="text" class="modal__form-element modal__form-subtitle" placeholder="About me">
+            <input type="text" class="modal__form-element modal__form-title" placeholder="Name" name="input-name">
+            <input type="text" class="modal__form-element modal__form-subtitle" placeholder="About me" name="input-aboutme">
           </fieldset>
         </form>
-        <input type="button" class="modal__btn" value="Save">
+        <button type="submit" class="modal__btn">Save</button>
         <p class="modal__form-x">+</p>
       </div>
     </section>

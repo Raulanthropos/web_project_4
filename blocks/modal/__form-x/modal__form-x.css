@@ -1,14 +1,22 @@
 .modal__form-x {
-  font-size: 60px;
+  font-size: 92px;
   transform: rotate(45deg);
   position: absolute;
-  top: -110px;
+  top: -175px;
   color: #fff;
-  right: -35px;
+  right: -65px;
   cursor: pointer;
   transition: opacity 2s linear;
 }
 
 .modal__form-x:hover {
   opacity: 0.6;
+}
+
+@media screen and (max-width: 644px) {
+  .modal__form-x {
+    font-size: 64px;
+    top: -135px;
+    right: -10px;
+  }
 }
