@@ -2,15 +2,12 @@
 @import url(./__fields/modal__fields.css);
 @import url(./__title/modal__title.css);
 @import url(./__form-element/modal__form-element.css);
-@import url(./__form-title/modal__form-title.css);
-@import url(./__form-subtitle/modal__form-subtitle.css);
 @import url(./__form-x/modal__form-x.css);
 @import url(./__btn/modal__btn.css);
 
 .modal {
   position: relative;
   width: 430px;
-  height: 330px;
   background-color: #fff;
   border-radius: 10px;
 }
@@ -18,7 +15,6 @@
 @media screen and (max-width: 644px) {
   .modal {
     width: 282px;
-    height: 322px;
     margin: 0 auto;
   }
 }
@@ -26,20 +22,17 @@
 @media screen and (max-width: 425px) {
   .modal {
     width: 70%;
-    margin: 0 auto;
   }
 }
 
 @media screen and (max-width: 390px) {
   .modal {
     width: 80%;
-    margin: 0 auto;
   }
 }
 
 @media screen and (max-width: 353px) {
   .modal {
     width: 90%;
-    margin: 0 auto;
   }
 }

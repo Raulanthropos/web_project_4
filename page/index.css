@@ -7,5 +7,9 @@
 @import url(../blocks/popup/popup.css);
 @import url(../blocks/popup/_active/popup_active.css);
 @import url(../blocks/modal/modal.css);
+@import url(../blocks/modal/__form-element/_title/modal__form-element_title.css);
+@import url(../blocks/modal/__form-element/_subtitle/modal__form-element_subtitle.css);
 @import url(../blocks/elements/elements.css);
 @import url(../blocks/footer/footer.css);
+
+/* Thank you Marina for your kind words! */

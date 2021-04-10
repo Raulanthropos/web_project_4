@@ -1,12 +1,18 @@
 .modal__form-x {
-  font-size: 92px;
-  transform: rotate(45deg);
+  background-image: url(../../../images/close-icon.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+  border: none;
+  width: 40px;
+  height: 40px;
   position: absolute;
-  top: -175px;
+  top: -48px;
   color: #fff;
-  right: -65px;
+  background-color: initial;
+  right: -48px;
   cursor: pointer;
-  transition: opacity 2s linear;
+  transition: all 0.5s linear;
 }
 
 .modal__form-x:hover {
@@ -15,8 +21,8 @@
 
 @media screen and (max-width: 644px) {
   .modal__form-x {
-    font-size: 64px;
-    top: -135px;
-    right: -10px;
+    background-image: url(../../../images/close-icon-sm.png);
+    top: -46px;
+    right: -2px;
   }
 }
