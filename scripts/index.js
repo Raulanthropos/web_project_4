@@ -4,9 +4,8 @@ let modalX = document.querySelector(".modal__form-x");
 let inputs = document.querySelectorAll(`.modal__form-element`);
 let title = document.querySelector(`.profile__title`);
 let aboutMe = document.querySelector(`.profile__subtitle`);
-let nameInput = document.querySelector(`.modal__form-element_title`);
-let jobInput = document.querySelector(`.modal__form-element_subtitle`);
-let saveProfileBtn = document.querySelector(`.modal__btn`);
+let nameInput = document.querySelector(`.modal__form-element_input_title`);
+let jobInput = document.querySelector(`.modal__form-element_input_subtitle`);
 let editForm = document.querySelector(`.modal__form`);
 let profile = {};
 
