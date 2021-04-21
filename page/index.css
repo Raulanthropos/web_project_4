@@ -11,3 +11,6 @@
 @import url(../blocks/modal/__form-element/_input/modal__form-element_input_subtitle.css);
 @import url(../blocks/elements/elements.css);
 @import url(../blocks/footer/footer.css);
+@import url(../blocks/button-add/button-add.css);
+@import url(../blocks/popup-add/popup-add.css);
+@import url(../blocks/button-close/button-close.css);
