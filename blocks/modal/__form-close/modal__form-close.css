@@ -1,4 +1,4 @@
-.modal__form-x {
+.modal__form-close {
   background-image: url(../../../images/close-icon.svg);
   background-position: center;
   background-repeat: no-repeat;
@@ -15,12 +15,12 @@
   transition: all 0.5s linear;
 }
 
-.modal__form-x:hover {
+.modal__form-close:hover {
   opacity: 0.6;
 }
 
 @media screen and (max-width: 644px) {
-  .modal__form-x {
+  .modal__form-close {
     background-image: url(../../../images/close-icon-sm.svg);
     top: -46px;
     right: -2px;

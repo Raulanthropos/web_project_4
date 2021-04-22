@@ -2,7 +2,7 @@
 @import url(./__fields/modal__fields.css);
 @import url(./__title/modal__title.css);
 @import url(./__form-element/modal__form-element.css);
-@import url(./__form-x/modal__form-x.css);
+@import url(./__form-close/modal__form-close.css);
 @import url(./__btn/modal__btn.css);
 
 .modal {
