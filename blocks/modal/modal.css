@@ -4,12 +4,15 @@
 @import url(./__form-element/modal__form-element.css);
 @import url(./__form-close/modal__form-close.css);
 @import url(./__btn/modal__btn.css);
+@import url(./__image/modal__image.css);
 
 .modal {
   position: relative;
   width: 430px;
   background-color: #fff;
   border-radius: 10px;
+  margin: 0;
+  padding: 0;
 }
 
 @media screen and (max-width: 644px) {

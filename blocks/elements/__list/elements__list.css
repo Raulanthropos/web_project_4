@@ -13,6 +13,7 @@
 @media screen and (max-width: 899px) {
   .elements__list {
     grid-template-columns: repeat(auto-fill, 282px);
+    justify-content: center;
     width: 100%;
     margin: 0 auto;
   }
