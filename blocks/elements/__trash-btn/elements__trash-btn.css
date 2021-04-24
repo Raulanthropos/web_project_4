@@ -2,13 +2,16 @@
   background-image: url(../../../images/trash.svg);
   background-color: transparent;
   background-repeat: no-repeat;
-  /* border: none; */
-  transition: opacity 0.4s linear;
+  border: none;
+  transition: all 0.4s linear;
   width: 18px;
   height: 19.3px;
-  z-index: 1;
-  /* position: absolute;
+  position: absolute;
   right: 18px;
-  top: 16px; */
+  top: 16px;
   cursor: pointer;
+}
+
+.elements__trash-btn:hover {
+  opacity: 0.5;
 }

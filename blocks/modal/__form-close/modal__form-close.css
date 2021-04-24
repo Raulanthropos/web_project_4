@@ -7,22 +7,12 @@
   width: 40px;
   height: 40px;
   position: absolute;
-  top: -48px;
   color: #fff;
   background-color: initial;
-  right: -48px;
   cursor: pointer;
   transition: all 0.5s linear;
 }
 
 .modal__form-close:hover {
   opacity: 0.6;
-}
-
-@media screen and (max-width: 644px) {
-  .modal__form-close {
-    background-image: url(../../../images/close-icon-sm.svg);
-    top: -46px;
-    right: -2px;
-  }
 }

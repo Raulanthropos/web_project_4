@@ -14,6 +14,7 @@
 @import url(../blocks/modal/__form-element/_input/modal__form-element_input_subtitle.css);
 @import url(../blocks/modal/__form-close/_type/modal__form-close_type_add.css);
 @import url(../blocks/modal/__form-close/_type/modal__form-close_type_edit.css);
+@import url(../blocks/modal/__form-close/_type/modal__form-close_type_image.css);
 @import url(../blocks/elements/elements.css);
 @import url(../blocks/footer/footer.css);
 
