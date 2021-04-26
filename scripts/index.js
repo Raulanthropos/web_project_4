@@ -1,7 +1,10 @@
 //Variable declarations//
+const popup = document.querySelector(`.popup`);
 const popupEdit = document.querySelector(".popup_type_edit");
 const popupAdd = document.querySelector(".popup_type_add");
-const popupImage = document.querySelector(".popup_type_image");
+const popupTypeImage = document.querySelector(".popup_type_image");
+const popupImage = document.querySelector(".popup__image");
+const popupImageTitle = document.querySelector(`.popup__image-caption`);
 const editButton = document.querySelector(".profile__container-icon");
 const addButton = document.querySelector(".profile__add-btn");
 const modalEditClose = document.querySelector(".modal__form-close_type_edit");
@@ -17,7 +20,6 @@ const linkInput = document.querySelector(`.modal__form-element_input_link`);
 const editForm = document.querySelector(`.modal__form_type_edit`);
 const addForm = document.querySelector(`.modal__form_type_add`);
 const cardList = document.querySelector(`.elements__list`);
-const imageModalWindow = document.querySelector(`.popup__image`);
 
 const profile = {
   name: title.textContent,
@@ -80,34 +82,18 @@ function createCard(card) {
   });
 
   cardImage.addEventListener(`click`, () => {
-    const popupImage = document.querySelector(".popup__image");
-    const popupImageTitle = document.querySelector(`.popup__image-caption`);
 
     popupImage.src = card.link;
+    popupImage.alt = card.name;
     popupImageTitle.textContent = card.name;
 
-    activateImageModal(imageModalWindow);
+    activateImageModal(popupImage);
   });
 
   return cardElement;
 }
 
-function editProfile() {
-  nameInput.value = profile.name;
-  jobInput.value = profile.about;
-}
-
-function closeEditProfile() {
-  popupEdit.classList.remove("popup_active");
-}
-
-function closeAddProfile() {
-  popupAdd.classList.remove("popup_active");
-}
-
-function closeImageProfile() {
-  popupImage.classList.remove("popup_active");
-}
+//Profile buttons//
 
 function saveProfile(evt) {
   evt.preventDefault();
@@ -126,17 +112,44 @@ function saveAddCard(evt) {
   closeAddProfile();
 }
 
+//Functions//
+
+function editProfile() {
+  nameInput.value = profile.name;
+  jobInput.value = profile.about;
+}
+
+function closePopup(popup) {
+  popup.classList.remove("popup_active");
+}
+
+function closeEditProfile() {
+  closePopup(popupEdit)
+}
+
+function closeAddProfile() {
+  closePopup(popupAdd)
+}
+
+function closeImageProfile() {
+  closePopup(popupTypeImage)
+}
+
+function openPopup(popup) {
+  popup.classList.add("popup_active");
+}
+
 function activateEditModal() {
-  popupEdit.classList.add("popup_active");
+  openPopup(popupEdit);
   editProfile();
 }
 
 function activateAddModal() {
-  popupAdd.classList.add("popup_active");
+  openPopup(popupAdd);
 }
 
 function activateImageModal() {
-  popupImage.classList.add("popup_active");
+  openPopup(popupTypeImage);
 }
 
 //Event listeners//
