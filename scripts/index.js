@@ -93,8 +93,6 @@ function createCard(card) {
   return cardElement;
 }
 
-//Profile buttons//
-
 function saveProfile(evt) {
   evt.preventDefault();
   title.textContent = nameInput.value;
@@ -111,8 +109,6 @@ function saveAddCard(evt) {
   renderCard(card, cardList);
   closeAddProfile();
 }
-
-//Functions//
 
 function editProfile() {
   nameInput.value = profile.name;
