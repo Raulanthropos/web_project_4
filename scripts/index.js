@@ -71,6 +71,7 @@ function createCard(card) {
 
   cardTitle.textContent = card.name;
   cardImage.src = card.link;
+  cardImage.alt = card.name;
 
   deleteButton.addEventListener("click", () => {
     const listItem = deleteButton.closest(".elements__card");
@@ -108,6 +109,8 @@ function saveAddCard(evt) {
   }
   renderCard(card, cardList);
   closeAddProfile();
+  captionInput.value = ''
+  linkInput.value = ''
 }
 
 function editProfile() {
