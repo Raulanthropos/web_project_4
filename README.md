@@ -1,5 +1,3 @@
-# web_project_4
-
 ## Around the U.S.
 
 ### This project is part of the curriculum at Practicum by Yandex. For this project we utilised HTML, CSS, Figma and Javascript.
