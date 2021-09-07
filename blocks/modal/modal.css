@@ -4,6 +4,8 @@
 @import url(./__form-element/modal__form-element.css);
 @import url(./__form-close/modal__form-close.css);
 @import url(./__btn/modal__btn.css);
+@import url(./__btn/_disabled/modal__btn_disabled.css);
+@import url(./__fields-input/modal__fields-input.css);
 
 .modal {
   position: relative;

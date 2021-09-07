@@ -9,13 +9,8 @@
   border-bottom-color: rgba(0, 0, 0, 0.2);
 }
 
-.modal__form-element:first-of-type {
-  margin-bottom: 29px;
-}
-
 @media screen and (max-width:644px) {
   .modal__form-element {
     width: 238px;
   }
-  
 }

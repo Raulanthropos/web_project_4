@@ -20,7 +20,7 @@ const linkInput = document.querySelector(`.modal__form-element_input_link`);
 const editForm = document.querySelector(`.modal__form_type_edit`);
 const addForm = document.querySelector(`.modal__form_type_add`);
 const cardList = document.querySelector(`.elements__list`);
-
+const ESC_KEYCODE = 27;
 const profile = {
   name: title.textContent,
   about: aboutMe.textContent,
@@ -52,6 +52,33 @@ const initialCards = [
     link: "https://code.s3.yandex.net/web-code/lago.jpg",
   },
 ];
+
+const isEscOrOverlayPressed = (evt, wrapper) => {
+  const activePopup = document.querySelector(".popup_active");
+  
+  if (evt.which === ESC_KEYCODE || evt.target.classList.contains("popup_active")) {
+    wrapper(activePopup);
+  }
+}
+
+const escAndOverlayHandle = evt => {
+  evt.preventDefault();
+  isEscOrOverlayPressed(evt, closePopup);
+}
+
+const openPopup = popup => {
+  popup.classList.add("popup_active");
+  document.addEventListener("keyup", escAndOverlayHandle);
+  document.addEventListener("click", escAndOverlayHandle);
+}
+
+const closePopup = popup => {
+  popup.classList.remove("popup_active");
+  document.removeEventListener("keyup", escAndOverlayHandle);
+  document.removeEventListener("click", escAndOverlayHandle);
+}
+
+
 
 function renderCard(card, wrapper) {
   wrapper.prepend(createCard(card));
@@ -118,10 +145,6 @@ function editProfile() {
   jobInput.value = profile.about;
 }
 
-function closePopup(popup) {
-  popup.classList.remove("popup_active");
-}
-
 function closeEditProfile() {
   closePopup(popupEdit)
 }
@@ -132,10 +155,6 @@ function closeAddProfile() {
 
 function closeImageProfile() {
   closePopup(popupTypeImage)
-}
-
-function openPopup(popup) {
-  popup.classList.add("popup_active");
 }
 
 function activateEditModal() {
