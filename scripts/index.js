@@ -1,5 +1,6 @@
 //Variable declarations//
 const popup = document.querySelector(`.popup`);
+const modal = document.querySelector(".modal");
 const popupEdit = document.querySelector(".popup_type_edit");
 const popupAdd = document.querySelector(".popup_type_add");
 const popupTypeImage = document.querySelector(".popup_type_image");
@@ -20,7 +21,7 @@ const linkInput = document.querySelector(`.modal__form-element_input_link`);
 const editForm = document.querySelector(`.modal__form_type_edit`);
 const addForm = document.querySelector(`.modal__form_type_add`);
 const cardList = document.querySelector(`.elements__list`);
-const ESC_KEYCODE = 27;
+
 const profile = {
   name: title.textContent,
   about: aboutMe.textContent,
@@ -53,32 +54,23 @@ const initialCards = [
   },
 ];
 
-const isEscOrOverlayPressed = (evt, wrapper) => {
-  const activePopup = document.querySelector(".popup_active");
-  
-  if (evt.which === ESC_KEYCODE || evt.target.classList.contains("popup_active")) {
-    wrapper(activePopup);
+document.addEventListener('click', evt => {
+  if (evt.target.closest === modal) {
+    modal.style.display = "none";
   }
-}
+  })
 
-const escAndOverlayHandle = evt => {
+const isEscEvent = (evt, action) => {
+  const activePopup = document.querySelector(".popup_active");
+  if (evt.key === "Escape") {
+    action(activePopup);
+  }
+};
+
+const handleEscKey = (evt) => {
   evt.preventDefault();
-  isEscOrOverlayPressed(evt, closePopup);
-}
-
-const openPopup = popup => {
-  popup.classList.add("popup_active");
-  document.addEventListener("keyup", escAndOverlayHandle);
-  document.addEventListener("click", escAndOverlayHandle);
-}
-
-const closePopup = popup => {
-  popup.classList.remove("popup_active");
-  document.removeEventListener("keyup", escAndOverlayHandle);
-  document.removeEventListener("click", escAndOverlayHandle);
-}
-
-
+  isEscEvent(evt, closePopup);
+};
 
 function renderCard(card, wrapper) {
   wrapper.prepend(createCard(card));
@@ -110,7 +102,6 @@ function createCard(card) {
   });
 
   cardImage.addEventListener(`click`, () => {
-
     popupImage.src = card.link;
     popupImage.alt = card.name;
     popupImageTitle.textContent = card.name;
@@ -132,12 +123,12 @@ function saveAddCard(evt) {
   evt.preventDefault();
   const card = {
     name: captionInput.value,
-    link: linkInput.value
-  }
+    link: linkInput.value,
+  };
   renderCard(card, cardList);
   closeAddProfile();
-  captionInput.value = ''
-  linkInput.value = ''
+  captionInput.value = "";
+  linkInput.value = "";
 }
 
 function editProfile() {
@@ -146,16 +137,26 @@ function editProfile() {
 }
 
 function closeEditProfile() {
-  closePopup(popupEdit)
+  closePopup(popupEdit);
 }
 
 function closeAddProfile() {
-  closePopup(popupAdd)
+  closePopup(popupAdd);
 }
 
 function closeImageProfile() {
-  closePopup(popupTypeImage)
+  closePopup(popupTypeImage);
 }
+
+const openPopup = (modalWindow) => {
+  modalWindow.classList.add("popup_active");
+  document.addEventListener("keyup", handleEscKey);
+};
+
+const closePopup = (modalWindow) => {
+  modalWindow.classList.remove("popup_active");
+  document.removeEventListener("keyup", handleEscKey);
+};
 
 function activateEditModal() {
   openPopup(popupEdit);

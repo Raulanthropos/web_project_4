@@ -2,5 +2,9 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+  text-align: justify;
+}
+
+.modal__fields-input:first-of-type {
+  margin-bottom: 29px;
 }
