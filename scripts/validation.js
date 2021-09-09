@@ -54,8 +54,6 @@ const enableValidation = settings => {
   });
 }
 
-
-
 enableValidation({
   formSelector: ".modal__form",
   inputSelector: ".modal__form-element",

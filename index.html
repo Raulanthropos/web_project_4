@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -8,7 +7,6 @@
   <link rel="stylesheet" href="./page/index.css">
   <title>Around the U.S</title>
 </head>
-
 <body class="page">
   <main class="body">
     <header class="header">
@@ -49,7 +47,7 @@
               <span id="profile-text-error" class="popup__error"></span>
             </div>
           </fieldset>
-          <button type="submit" class="modal__btn" aria-label="submit-form-button">Save</button>
+          <button type="submit" class="modal__btn" aria-label="submit-form-button" disabled>Save</button>
         </form>
         <button type="button" class="popup__close modal__form-close modal__form-close_type_edit"
           aria-label="close-form-button"></button>
@@ -65,14 +63,14 @@
                 class="popup__input modal__form-element modal__form-element_input_caption" placeholder="Title"
                 name="input-name" required minlength="1" maxlength="30">
               <span id="add-title-error" class="popup__error"></span>
-              </div>
-              <div class="modal__input-fields">
+            </div>
+            <div class="modal__input-fields">
               <input id="add-link" type="url" class="popup__input modal__form-element modal__form-element_input_link"
                 placeholder="Image link" name="input-aboutme" required>
               <span id="add-link-error" class="popup__error"></span>
             </div>
           </fieldset>
-          <button type="submit" class="modal__btn" aria-label="submit-form-button">Create</button>
+          <button type="submit" class="modal__btn" aria-label="submit-form-button" disabled>Create</button>
         </form>
         <button type="button" class="popup__close modal__form-close modal__form-close_type_add"
           aria-label="close-form-button"></button>
@@ -89,10 +87,8 @@
       </div>
     </div>
   </main>
-
   <script src="./scripts/validation.js" defer></script>
   <script src="./scripts/index.js" defer></script>
-
   <template id="element-template">
     <li class="elements__card">
       <button class="elements__trash-btn" aria-label="delete-button" type="button"></button>
@@ -103,7 +99,5 @@
       </div>
     </li>
   </template>
-
 </body>
-
 </html>

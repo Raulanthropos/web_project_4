@@ -21,7 +21,7 @@ const linkInput = document.querySelector(`.modal__form-element_input_link`);
 const editForm = document.querySelector(`.modal__form_type_edit`);
 const addForm = document.querySelector(`.modal__form_type_add`);
 const cardList = document.querySelector(`.elements__list`);
-
+const form = document.querySelector('.popup__form');
 const profile = {
   name: title.textContent,
   about: aboutMe.textContent,
@@ -54,11 +54,12 @@ const initialCards = [
   },
 ];
 
-document.addEventListener('click', evt => {
-  if (evt.target.closest === modal) {
-    modal.style.display = "none";
+const clickOnInvisibleOverlay = (evt) => {
+  const activePopup = document.querySelector(".popup_active");
+  if (evt.target.classList.contains("popup_active")) {
+    closePopup(activePopup);
   }
-  })
+};
 
 const isEscEvent = (evt, action) => {
   const activePopup = document.querySelector(".popup_active");
@@ -151,16 +152,17 @@ function closeImageProfile() {
 const openPopup = (modalWindow) => {
   modalWindow.classList.add("popup_active");
   document.addEventListener("keyup", handleEscKey);
+  document.addEventListener("click", clickOnInvisibleOverlay);
 };
 
 const closePopup = (modalWindow) => {
   modalWindow.classList.remove("popup_active");
   document.removeEventListener("keyup", handleEscKey);
+  document.removeEventListener("click", clickOnInvisibleOverlay);
 };
 
 function activateEditModal() {
   openPopup(popupEdit);
-  editProfile();
 }
 
 function activateAddModal() {
@@ -169,6 +171,11 @@ function activateAddModal() {
 
 function activateImageModal() {
   openPopup(popupTypeImage);
+}
+
+const resetForm = evt => {
+  evt.preventDefault();
+  form.reset();
 }
 
 //Event listeners//
@@ -180,3 +187,4 @@ modalAddClose.addEventListener(`click`, closeAddProfile);
 modalImageClose.addEventListener(`click`, closeImageProfile);
 editForm.addEventListener(`submit`, saveProfile);
 addForm.addEventListener(`submit`, saveAddCard);
+form.addEventListener("submit", resetForm)
