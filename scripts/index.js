@@ -1,6 +1,4 @@
 //Variable declarations//
-const popup = document.querySelector(`.popup`);
-const modal = document.querySelector(".modal");
 const popupEdit = document.querySelector(".popup_type_edit");
 const popupAdd = document.querySelector(".popup_type_add");
 const popupTypeImage = document.querySelector(".popup_type_image");
@@ -22,6 +20,7 @@ const editForm = document.querySelector(`.modal__form_type_edit`);
 const addForm = document.querySelector(`.modal__form_type_add`);
 const cardList = document.querySelector(`.elements__list`);
 const form = document.querySelector('.popup__form');
+const submitButton = document.querySelector('.modal__btn');
 const profile = {
   name: title.textContent,
   about: aboutMe.textContent,
@@ -55,15 +54,14 @@ const initialCards = [
 ];
 
 const clickOnInvisibleOverlay = (evt) => {
-  const activePopup = document.querySelector(".popup_active");
   if (evt.target.classList.contains("popup_active")) {
-    closePopup(activePopup);
+    closePopup(evt.target);
   }
 };
 
 const isEscEvent = (evt, action) => {
-  const activePopup = document.querySelector(".popup_active");
   if (evt.key === "Escape") {
+    const activePopup = document.querySelector(".popup_active");
     action(activePopup);
   }
 };
@@ -107,7 +105,7 @@ function createCard(card) {
     popupImage.alt = card.name;
     popupImageTitle.textContent = card.name;
 
-    activateImageModal(popupImage);
+    activateImageModal();
   });
 
   return cardElement;
@@ -163,6 +161,7 @@ const closePopup = (modalWindow) => {
 
 function activateEditModal() {
   openPopup(popupEdit);
+  editProfile();
 }
 
 function activateAddModal() {
@@ -187,4 +186,3 @@ modalAddClose.addEventListener(`click`, closeAddProfile);
 modalImageClose.addEventListener(`click`, closeImageProfile);
 editForm.addEventListener(`submit`, saveProfile);
 addForm.addEventListener(`submit`, saveAddCard);
-form.addEventListener("submit", resetForm)
