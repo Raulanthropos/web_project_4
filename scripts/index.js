@@ -22,8 +22,8 @@ const cardList = document.querySelector(`.elements__list`);
 const form = document.querySelector('.popup__form');
 const submitButton = document.querySelector('.modal__btn');
 const profile = {
-  name: title.textContent,
-  about: aboutMe.textContent,
+  name: nameInput.textContent,
+  about: jobInput.textContent,
 };
 
 const initialCards = [
@@ -128,6 +128,8 @@ function saveAddCard(evt) {
   closeAddProfile();
   captionInput.value = "";
   linkInput.value = "";
+  // submitButton.disabled = true;
+  // submitButton.classList.add("modal__btn_disabled");
 }
 
 function editProfile() {
