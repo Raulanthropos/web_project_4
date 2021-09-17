@@ -128,8 +128,8 @@ function saveAddCard(evt) {
   closeAddProfile();
   captionInput.value = "";
   linkInput.value = "";
-  // submitButton.disabled = true;
-  // submitButton.classList.add("modal__btn_disabled");
+  submitButton.disabled = true;
+  submitButton.classList.add("modal__btn_disabled");
 }
 
 function editProfile() {
