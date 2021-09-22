@@ -21,6 +21,7 @@ const addForm = document.querySelector(`.modal__form_type_add`);
 const cardList = document.querySelector(`.elements__list`);
 const form = document.querySelector('.popup__form');
 const submitButton = document.querySelector('.modal__btn');
+const createButton = document.querySelector('.modal__btn-create');
 const profile = {
   name: nameInput.textContent,
   about: jobInput.textContent,
@@ -128,13 +129,12 @@ function saveAddCard(evt) {
   closeAddProfile();
   captionInput.value = "";
   linkInput.value = "";
-  submitButton.disabled = true;
-  submitButton.classList.add("modal__btn_disabled");
+  createButton.classList.add("modal__btn_disabled");
 }
 
 function editProfile() {
-  nameInput.value = profile.name;
-  jobInput.value = profile.about;
+  nameInput.value = title.textContent;
+  jobInput.value = aboutMe.textContent;
 }
 
 function closeEditProfile() {
@@ -162,8 +162,8 @@ const closePopup = (modalWindow) => {
 };
 
 function activateEditModal() {
-  openPopup(popupEdit);
   editProfile();
+  openPopup(popupEdit);
 }
 
 function activateAddModal() {
@@ -172,11 +172,6 @@ function activateAddModal() {
 
 function activateImageModal() {
   openPopup(popupTypeImage);
-}
-
-const resetForm = evt => {
-  evt.preventDefault();
-  form.reset();
 }
 
 //Event listeners//
